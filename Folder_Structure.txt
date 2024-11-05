@@ -1,0 +1,25 @@
+my-landscaping-site/
+├── public/               # Static files (images, icons, etc.)
+│   ├── images/           # Placeholder for images (e.g., logo, background, services)
+│   └── favicon.ico       # Favicon
+├── src/                  # Source files for the app
+│   ├── components/       # Reusable UI components
+│   │   ├── Button.js     # Button component (e.g., for call-to-action buttons)
+│   │   ├── ServiceCard.js# Card component for services
+│   │   ├── FAQItem.js    # FAQ item component
+│   │   ├── Navbar.js     # Navigation bar
+│   │   ├── Footer.js     # Footer
+│   │   └── SectionHeader.js # For section headings (e.g., "Our Services")
+│   ├── pages/            # Next.js pages (each file represents a route)
+│   │   ├── _app.js       # Custom App component
+│   │   ├── index.js      # Homepage
+│   │   └── contact.js    # Contact page
+│   ├── styles/           # CSS/SCSS modules or global styles
+│   │   ├── globals.css   # Global styles
+│   │   ├── Home.module.css # Home page styles
+│   │   ├── Navbar.module.css # Navbar styles
+│   │   └── Footer.module.css # Footer styles
+│   └── data/             # Data files for FAQ, services, etc.
+│       ├── services.js   # Service details
+│       └── faqs.js       # FAQ data
+└── package.json          # Dependencies and scripts
