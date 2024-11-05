@@ -12,7 +12,7 @@ export default function ServicesSection() {
     };
 
     return (
-        <section className="bg-[#191919] text-white pt-8 md:pt-24">
+        <section id="services" className="bg-[#191919] text-white pt-8 md:pt-4">
             <div className="max-w-[1920px] px-6 mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-4">
 
                 {/* Text and Buttons Section */}

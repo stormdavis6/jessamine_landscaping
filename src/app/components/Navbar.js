@@ -6,11 +6,11 @@ import Image from 'next/image';
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
-    const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth',
-        });
+    const scrollToSection = (sectionId) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
     };
 
     return (
@@ -18,7 +18,7 @@ export default function Navbar() {
             <div className="max-w-[1920px] mx-auto flex items-center justify-between px-6">
 
                 {/* Logo Section */}
-                <button onClick={scrollToTop} className="focus:outline-none">
+                <button onClick={scrollToSection('hero')} className="focus:outline-none">
                     <Image
                         src="/images/logo.png"
                         alt="Jessamine Landscaping Logo"
@@ -69,7 +69,11 @@ export default function Navbar() {
                     style={{ fontFamily: "'Figtree', sans-serif" }} // Apply Figtree font
                 >
                     <li>
-                        <a href="#" className="hover:text-[rgb(252,194,0)]">
+                        <a
+                            href="#"
+                            onClick={() => scrollToSection('services')}
+                            className="hover:text-[rgb(252,194,0)]"
+                        >
                             Services
                         </a>
                     </li>

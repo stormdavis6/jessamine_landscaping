@@ -27,7 +27,7 @@ export default function HeroSection() {
     };
 
     return (
-        <section className="bg-[#191919] text-white pt-8 md:pt-24">
+        <section id="hero" className="bg-[#191919] text-white pt-8 md:pt-24">
             <div className="max-w-[1920px] px-6 mx-auto flex flex-col md:flex-row md:items-center md:justify-between">
 
                 {/* Text Section */}
@@ -58,7 +58,7 @@ export default function HeroSection() {
             </div>
 
             {/* Bottom Image */}
-            <div className="w-full py-4 my-12">
+            <div className="w-full py-4">
                 <Image
                     src={isSmallScreen ? "/images/heroSectionImageCropped.png" : "/images/heroSectionImage.png"}
                     alt={isSmallScreen ? "Cropped Grass Strip" : "Grass Strip"}
