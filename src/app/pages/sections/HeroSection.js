@@ -58,10 +58,10 @@ export default function HeroSection() {
             </div>
 
             {/* Bottom Image */}
-            <div className="w-full py-4">
+            <div className="w-full mt-4">
                 <Image
                     src={isSmallScreen ? "/images/heroSectionImageCropped.png" : "/images/heroSectionImage.png"}
-                    alt={isSmallScreen ? "Cropped Grass Strip" : "Grass Strip"}
+                    alt="Grass Strip"
                     width={1920}
                     height={400}
                     className="w-full object-cover object-[95%] md:object-contain"

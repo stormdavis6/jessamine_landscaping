@@ -1,11 +1,11 @@
 my-landscaping-site/
 ├── public/               # Static files (images, icons, etc.)
-│   ├── images/           # Placeholder for images (e.g., logo, background, services)
+│   ├── images/           # Placeholder for images (e.g., logo, background, vectorArtServices)
 │   └── favicon.ico       # Favicon
 ├── src/                  # Source files for the app
 │   ├── components/       # Reusable UI components
 │   │   ├── Button.js     # Button component (e.g., for call-to-action buttons)
-│   │   ├── ServiceCard.js# Card component for services
+│   │   ├── VectorArtServiceCard.js# Card component for vectorArtServices
 │   │   ├── FAQItem.js    # FAQ item component
 │   │   ├── Navbar.js     # Navigation bar
 │   │   ├── Footer.js     # Footer
@@ -19,7 +19,7 @@ my-landscaping-site/
 │   │   ├── Home.module.css # Home page styles
 │   │   ├── Navbar.module.css # Navbar styles
 │   │   └── Footer.module.css # Footer styles
-│   └── data/             # Data files for FAQ, services, etc.
-│       ├── services.js   # Service details
+│   └── data/             # Data files for FAQ, vectorArtServices, etc.
+│       ├── vectorArtServices.js   # Service details
 │       └── faqs.js       # FAQ data
 └── package.json          # Dependencies and scripts

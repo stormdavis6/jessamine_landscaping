@@ -1,10 +1,27 @@
 "use client";
 
-import ServiceCard from '../../components/ServiceCard';
-import { services } from '../../data/services';
+import VectorArtServiceCard from '../../components/VectorArtServiceCard';
+import { vectorArtServices } from '../../data/vectorArtServices';
 import Button from "@/app/components/Button";
+import Image from "next/image";
+import {useEffect, useState} from "react";
 
 export default function ServicesSection() {
+
+    const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsSmallScreen(window.innerWidth < 640); // Adjust this value as needed
+        };
+
+        handleResize(); // Check initial size
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
 
     const handleCallNowClick = () => {
         // Logic for handling the button click
@@ -16,11 +33,11 @@ export default function ServicesSection() {
             <div className="max-w-[1920px] px-6 mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-4">
 
                 {/* Text and Buttons Section */}
-                <div className="flex flex-col px-4 max-w-xl items-center mr-12">
-                    <h1 className="font-figtree font-bold text-4xl lg:text-6xl mb-5 md:mb-10 text-left">
+                <div className="flex flex-col px-4 max-w-lg xl:max-w-xl items-center">
+                    <h1 className="font-figtree font-bold text-3xl lg:text-5xl mb-5 md:mb-10 text-left">
                         Shape Your Outdoor Space with Our Expert Services
                     </h1>
-                    <p className="font-figtree font-normal text-xl lg:text-2xl md:text-left mb-8">
+                    <p className="font-figtree font-normal text-lg lg:text-xl md:text-left mb-8">
                         Our comprehensive landscaping services cater to all your outdoor needs. From lawn care to
                         irrigation design, we ensure your landscape thrives.
                     </p>
@@ -41,12 +58,10 @@ export default function ServicesSection() {
 
                 </div>
 
-
-
                 {/* Service Cards Section */}
                 <div className="grid grid-cols-2 gap-2 md:gap-7 w-full">
-                    {services.map((service) => (
-                        <ServiceCard key={service.id} title={service.title} description={service.description} image={service.image} />
+                    {vectorArtServices.map((service) => (
+                        <VectorArtServiceCard key={service.id} title={service.title} description={service.description} image={service.image} />
                     ))}
                 </div>
 
@@ -65,6 +80,18 @@ export default function ServicesSection() {
                 </div>
 
             </div>
+
+            {/* Bottom Image */}
+            <div className="w-full items-center mt-8">
+                <Image
+                    src={isSmallScreen ? "/images/servicesSectionImageCropped.png" : "/images/servicesSectionImage.png"}
+                    alt="Bushes"
+                    width={1920}
+                    height={400}
+                    className="w-full object-cover md:object-contain"
+                />
+            </div>
+
         </section>
     );
 }
