@@ -60,7 +60,7 @@ export default function HeroSection() {
             {/* Bottom Image */}
             <div className="w-full mt-4">
                 <Image
-                    src={isSmallScreen ? "/images/heroSectionImageCropped.png" : "/images/heroSectionImage.png"}
+                    src={isSmallScreen ? "/images/dividers/heroDividerCropped.png" : "/images/dividers/heroDivider.png"}
                     alt="Grass Strip"
                     width={1920}
                     height={400}

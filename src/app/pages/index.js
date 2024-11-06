@@ -1,6 +1,6 @@
 import Navbar from '../components/Navbar';
 import HeroSection from '../pages/sections/HeroSection';
-import ServicesSection from '../pages/sections/ServicesSection';
+import VectorArtServicesSection from './sections/VectorArtServicesSection';
 import AboutSection from '../pages/sections/AboutSection';
 import FAQSection from '../pages/sections/FAQSection';
 import Footer from '../components/Footer';
@@ -11,7 +11,7 @@ export default function Home() {
             <Navbar />
             <main>
                 <HeroSection />
-                <ServicesSection />
+                <VectorArtServicesSection />
                 <AboutSection />
                 <FAQSection />
             </main>
