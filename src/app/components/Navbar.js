@@ -23,7 +23,7 @@ export default function Navbar() {
                 {/* Logo Section */}
                 <button onClick={() => scrollToSection('hero')} className="focus:outline-none">
                     <Image
-                        src="/images/logo.png"
+                        src="/images/logo/logo.png"
                         alt="Jessamine Landscaping Logo"
                         width={400}
                         height={80}
