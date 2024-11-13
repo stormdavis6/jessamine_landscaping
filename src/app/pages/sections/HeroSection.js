@@ -27,19 +27,15 @@ export default function HeroSection() {
     };
 
     return (
-        <section id="hero" className="bg-[#191919] text-white flex flex-col items-center pt-8 md:pt-24"
-                 style={{ minHeight: "calc(100vh - 85px)" }}  // Replace 80px with your actual navbar height
-        >
-            {/* Centered Content Wrapper */}
-            <div
-                className="flex-grow flex flex-col md:flex-row justify-between items-center max-w-[1920px] px-6 mx-auto gap-y-10 md:gap-y-0 md:gap-x-16">
+        <section id="hero" className="bg-[#191919] text-white pt-8 md:pt-24">
+            <div className="max-w-[1920px] px-6 mx-auto flex flex-col md:flex-row md:items-center md:justify-between">
 
                 {/* Text Section */}
-                <div className="flex flex-col flex-1 px-4 max-w-2xl items-start">
+                <div className="flex flex-col flex-1 px-4 md:mr-32 max-w-2xl">
                     <h1 className="font-figtree font-semibold text-4xl md:text-6xl mb-5 md:mb-10 text-left">
                         Shaping Outdoor Spaces That Inspire and Soothe
                     </h1>
-                    <p className="font-figtree font-normal text-md md:text-xl md:text-left mb-3">
+                    <p className="font-figtree font-normal text-md md:text-xl md:text-left mb-12">
                         Experience the beauty of a well-maintained landscape that enhances your property's curb
                         appeal. Our team of professionals is here to provide tailored solutions for all your landscaping
                         needs.
@@ -47,15 +43,15 @@ export default function HeroSection() {
                 </div>
 
                 {/* Buttons Section */}
-                <div className="flex flex-col flex-1 px-4 items-end gap-7 md:gap-9 mb-3">
+                <div className="flex flex-col px-4 md:mr-16 items-center gap-7 md:gap-9">
                     <Button
                         text="Schedule a Consultation"
-                        className={"bg-[#D2D5DA] text-[#191919] hover:bg-[rgb(252,194,0)] border-none min-w-48 min-h-20 px-4 py-4 rounded-2xl cursor-pointer text-xl md:text-2xl font-bold font-figtree flex items-center justify-center"}
+                        className={"bg-[#D2D5DA] text-[#191919] hover:bg-[rgb(252,194,0)] border-none min-w-52 min-h-20 px-4 py-4 rounded-2xl cursor-pointer text-xl md:text-2xl font-bold font-figtree flex items-center justify-center"}
                         onClick={handleCallNowClick}
                     />
                     <Button
                         text="Call Now 864.359.8470"
-                        className={"bg-[#D2D5DA] text-[#191919] hover:bg-[rgb(252,194,0)] border-none min-w-48 min-h-20 px-4 py-4 rounded-2xl cursor-pointer text-xl md:text-2xl font-bold font-figtree flex items-center justify-center"}
+                        className={"bg-[#D2D5DA] text-[#191919] hover:bg-[rgb(252,194,0)] border-none min-w-52 min-h-20 px-4 py-4 rounded-2xl cursor-pointer text-xl md:text-2xl font-bold font-figtree flex items-center justify-center"}
                         onClick={handleCallNowClick}
                     />
                 </div>
