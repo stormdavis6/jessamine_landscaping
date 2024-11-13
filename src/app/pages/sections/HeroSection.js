@@ -32,14 +32,14 @@ export default function HeroSection() {
         >
             {/* Centered Content Wrapper */}
             <div
-                className="flex-grow flex flex-col md:flex-row justify-center items-center max-w-[1920px] px-6 mx-auto gap-y-10 md:gap-y-0 md:gap-x-16">
+                className="flex-grow flex flex-col md:flex-row justify-between items-center max-w-[1920px] px-6 mx-auto gap-y-10 md:gap-y-0 md:gap-x-16">
 
                 {/* Text Section */}
-                <div className="flex flex-col flex-1 px-4 max-w-2xl">
-                    <h1 className="font-figtree font-semibold text-4xl lg:text-6xl mb-5 md:mb-10 text-left">
+                <div className="flex flex-col flex-1 px-4 max-w-2xl items-start">
+                    <h1 className="font-figtree font-semibold text-4xl md:text-6xl mb-5 md:mb-10 text-left">
                         Shaping Outdoor Spaces That Inspire and Soothe
                     </h1>
-                    <p className="font-figtree font-normal text-md md:text-xl md:text-left mb-12">
+                    <p className="font-figtree font-normal text-md md:text-xl md:text-left mb-3">
                         Experience the beauty of a well-maintained landscape that enhances your property's curb
                         appeal. Our team of professionals is here to provide tailored solutions for all your landscaping
                         needs.
@@ -47,7 +47,7 @@ export default function HeroSection() {
                 </div>
 
                 {/* Buttons Section */}
-                <div className="flex flex-col flex-1 px-4 items-center gap-7 md:gap-9">
+                <div className="flex flex-col flex-1 px-4 items-end gap-7 md:gap-9 mb-3">
                     <Button
                         text="Schedule a Consultation"
                         className={"bg-[#D2D5DA] text-[#191919] hover:bg-[rgb(252,194,0)] border-none min-w-48 min-h-20 px-4 py-4 rounded-2xl cursor-pointer text-xl md:text-2xl font-bold font-figtree flex items-center justify-center"}
