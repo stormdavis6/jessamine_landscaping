@@ -66,7 +66,7 @@ export default function Navbar() {
 
                 {/* Navigation Links */}
                 <ul
-                    className={`flex-col md:flex md:flex-row md:items-center md:ml-36 gap-8 mt-4 md:mt-0 text-lg text-center font-semibold ${
+                    className={`flex-col md:flex md:flex-row md:items-center md:justify-between md:ml-10 gap-8 mt-4 md:mt-0 text-xl lg:text-2xl text-center font-semibold ${
                         isOpen ? 'flex' : 'hidden'
                     } md:flex`}
                     style={{ fontFamily: "'Figtree', sans-serif" }} // Apply Figtree font
