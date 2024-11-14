@@ -5,6 +5,7 @@ import ServicesSection from './pages/sections/ServicesSection';
 import AboutSection from './pages/sections/AboutSection';
 import FAQSection from './pages/sections/FAQSection';
 import Footer from './components/Footer';
+import TransformYourSpaceSection from "@/app/pages/sections/TransformYourSpaceSection";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
           <HeroSection />
           <VectorArtServicesSection />
           <ServicesSection />
+          <TransformYourSpaceSection />
           {/*<AboutSection />*/}
           {/*<FAQSection />*/}
         </main>

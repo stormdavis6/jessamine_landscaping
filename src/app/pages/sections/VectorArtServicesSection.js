@@ -2,8 +2,6 @@
 
 import VectorArtServiceCard from '../../components/VectorArtServiceCard';
 import { vectorArtServices } from '../../data/vectorArtServices';
-import ServiceCard from "@/app/components/ServiceCard";
-import { services } from '../../data/services';
 import Button from "@/app/components/Button";
 import Image from "next/image";
 import {useEffect, useState} from "react";
