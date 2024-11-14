@@ -41,11 +41,11 @@ export default function VectorArtServicesSection() {
                 className="max-w-[1920px] px-6 mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-4">
 
                 {/* Text and Buttons Section */}
-                <div className="flex flex-col px-4 max-w-lg xl:max-w-xl items-center">
-                    <h1 className="font-figtree font-bold text-3xl lg:text-5xl mb-5 md:mb-10 text-left">
+                <div className="flex flex-col px-4 max-w-sm sm:max-w-sm xl:max-w-xl items-center lg:mr-7">
+                    <h1 className="font-figtree font-bold text-3xl lg:text-5xl xl:text-7xl mb-5 md:mb-10 text-left">
                         Shape Your Outdoor Space with Our Expert Services
                     </h1>
-                    <p className="font-figtree font-normal text-lg lg:text-xl md:text-left mb-8">
+                    <p className="font-figtree font-normal text-lg lg:text-xl xl:text-2xl md:text-left mb-8">
                         Our comprehensive landscaping services cater to all your outdoor needs. From lawn care to
                         irrigation design, we ensure your landscape thrives.
                     </p>
@@ -54,12 +54,12 @@ export default function VectorArtServicesSection() {
                     <div className="hidden md:flex gap-4 mt-4 md:mt-8">
                         <Button
                             text="Learn More"
-                            className="flex-1 bg-[#D2D5DA] text-[#191919] hover:bg-[rgb(252,194,0)] border-none min-w-32 min-h-10 px-2 py-4 rounded-2xl cursor-pointer text-lg md:text-xl font-bold font-figtree flex items-center justify-center"
+                            className="flex-1 bg-[#D2D5DA] text-[#191919] hover:bg-[rgb(252,194,0)] border-none min-w-48 min-h-10 px-2 py-4 rounded-2xl cursor-pointer text-lg md:text-xl font-bold font-figtree flex items-center justify-center"
                             onClick={handleLearnMoreClick}
                         />
                         <Button
                             text="Call Now"
-                            className="flex-1 bg-[#D2D5DA] text-[#191919] hover:bg-[rgb(252,194,0)] border-none min-w-32 min-h-10 px-2 py-4 rounded-2xl cursor-pointer text-lg md:text-xl font-bold font-figtree flex items-center justify-center"
+                            className="flex-1 bg-[#D2D5DA] text-[#191919] hover:bg-[rgb(252,194,0)] border-none min-w-48 min-h-10 px-2 py-4 rounded-2xl cursor-pointer text-lg md:text-xl font-bold font-figtree flex items-center justify-center"
                             onClick={null}
                         />
                     </div>
