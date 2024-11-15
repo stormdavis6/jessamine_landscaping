@@ -1,7 +1,7 @@
 export default function OurStorySection() {
     return (
         <section id="ourStory" className="bg-[#191919] text-white pt-4 md:pt-8">
-            {/* Services Text */}
+            {/* Our Story Text */}
             <div
                 className="max-w-[1920px] px-6 py-10 mx-auto flex flex-col gap-4">
 

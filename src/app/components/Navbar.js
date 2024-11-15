@@ -92,7 +92,10 @@ export default function Navbar() {
                         </a>
                     </li>
                     <li>
-                        <a href="#" className="hover:text-[rgb(252,194,0)]">
+                        <a
+                            href="#"
+                            onClick={() => scrollToSection('faq')}
+                            className="hover:text-[rgb(252,194,0)]">
                             FAQs
                         </a>
                     </li>

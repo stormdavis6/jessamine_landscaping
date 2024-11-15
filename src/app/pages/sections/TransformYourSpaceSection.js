@@ -9,6 +9,16 @@ export default function TransformYourSpaceSection() {
         console.log('Call Now button clicked!');
     };
 
+    const scrollToSection = (sectionId) => {
+        // Check if running on the client side
+        if (typeof document !== 'undefined') {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    };
+
     return (
         <section id="transformYourSpace" className="bg-[#191919] text-white pt-6 md:pt-10 px-6">
 
@@ -35,7 +45,7 @@ export default function TransformYourSpaceSection() {
                         <Button
                             text="FAQ"
                             className="bg-[#191919] text-white border border-[#FCC200] min-w-32 min-h-15 p-4 md:p-6 cursor-pointer sm:text-xl md:text-2xl lg:text-3xl font-bold font-figtree flex items-center justify-center"
-                            onClick={handleCallNowClick}
+                            onClick={() => scrollToSection('faq')}
                         />
                     </div>
                 </div>
@@ -54,7 +64,7 @@ export default function TransformYourSpaceSection() {
 
             {/* Additional Text Section */}
             <div
-                className="max-w-[1920px] flex flex-col items-center md:items-start p-6 mt-3 md:mt-12 md:p-0 mx-auto">
+                className="max-w-[1920px] flex flex-col items-center md:items-start px-6 pt-6 mt-3 md:mt-12 md:p-0 mx-auto">
                 <div className="max-w-sm md:max-w-lg lg:max-w-4xl">
                     <p className="font-figtree font-normal text-lg lg:text-xl xl:text-2xl text-center md:text-left mb-5 md:mb-7">
                         Our landscaping services are designed to enhance the beauty and functionality of your outdoor
