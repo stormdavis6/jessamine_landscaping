@@ -1,6 +1,6 @@
 export default function ServiceCard({ description, image }) {
     return (
-        <div className="bg-none rounded-b-3xl overflow-hidden lg:p-4 text-white font-figtree transform transition duration-300 hover:scale-105">
+        <div className="bg-none overflow-hidden lg:p-4 text-white font-figtree transform transition duration-300 hover:scale-105">
             <img
                 src={image}
                 alt={description}

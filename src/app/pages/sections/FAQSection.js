@@ -3,11 +3,19 @@
 import FAQItem from '../../components/FAQItem';
 import { faqs } from '../../data/faqs';
 import Button from "@/app/components/Button";
+import Modal from "@/app/components/Modal";
+import ContactForm from "@/app/components/ContactForm";
+import {useState} from "react";
 
 export default function FAQSection() {
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
-    const handleCallNowClick = () => {
-        console.log('Call Now button clicked!');
+    const handleOpenModal = () => {
+        setIsModalOpen(true);
+    };
+
+    const handleCloseModal = () => {
+        setIsModalOpen(false);
     };
 
     return (
@@ -43,9 +51,15 @@ export default function FAQSection() {
                 <Button
                     text="Contact"
                     className="bg-[#191919] text-[#FCC200] border-4 border-[#FCC200] min-w-32 min-h-15 p-4 md:p-6 cursor-pointer sm:text-xl md:text-2xl lg:text-3xl font-bold font-figtree flex items-center justify-center"
-                    onClick={handleCallNowClick}
+                    onClick={handleOpenModal}  // Open modal when clicked
                 />
             </div>
+
+            {/* Modal with Contact Form */}
+            <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
+                <ContactForm />
+            </Modal>
+
         </section>
     );
 }

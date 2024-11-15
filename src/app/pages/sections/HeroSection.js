@@ -69,6 +69,7 @@ export default function HeroSection() {
                     className="w-full object-cover object-[95%] md:object-contain"
                 />
             </div>
+
         </section>
     );
 }
