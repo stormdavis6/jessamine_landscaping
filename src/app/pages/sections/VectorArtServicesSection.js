@@ -39,7 +39,7 @@ export default function VectorArtServicesSection() {
                 className="max-w-[1920px] px-6 mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-4">
 
                 {/* Text and Buttons Section */}
-                <div className="flex flex-col px-4 max-w-sm sm:max-w-sm xl:max-w-xl items-center lg:mr-7">
+                <div className="flex flex-col max-w-sm sm:max-w-sm xl:max-w-xl items-center lg:mr-7">
                     <h1 className="font-figtree font-bold text-3xl lg:text-5xl xl:text-7xl mb-5 md:mb-10 text-left">
                         Shape Your Outdoor Space with Our Expert Services
                     </h1>
