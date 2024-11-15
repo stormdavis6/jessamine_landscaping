@@ -17,7 +17,7 @@ export default function TransformYourSpaceSection() {
                 className="max-w-[1920px] p-6 md:p-0 mx-auto flex flex-col items-center md:flex-row md:items-stretch md:justify-between border-4 border-[#FCC200] rounded-[30px] overflow-hidden h-full">
 
                 {/* Text Section */}
-                <div className="p-6 flex flex-col max-w-sm md:max-w-lg lg:max-w-4xl">
+                <div className="md:p-6 flex flex-col max-w-sm md:max-w-lg lg:max-w-4xl">
                     <h1 className="font-figtree font-bold text-3xl lg:text-5xl xl:text-7xl mb-5 md:mb-7 text-left text-[rgb(252,194,0)]">
                         Transform Your Outdoor Space Today
                     </h1>
