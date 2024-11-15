@@ -20,7 +20,7 @@ export default function TransformYourSpaceSection() {
     };
 
     return (
-        <section id="transformYourSpace" className="bg-[#191919] text-white pt-6 md:pt-10 px-6">
+        <section id="transformYourSpace" className="bg-[#191919] text-white pt-4 md:pt-8 px-6">
 
             {/* Main Content */}
             <div

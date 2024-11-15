@@ -34,7 +34,7 @@ export default function VectorArtServicesSection() {
     };
 
     return (
-        <section id="vectorArtServices" className="bg-[#191919] text-white pt-8 md:pt-4">
+        <section id="vectorArtServices" className="bg-[#191919] text-white pt-4 md:pt-8">
             <div
                 className="max-w-[1920px] px-6 mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-4">
 

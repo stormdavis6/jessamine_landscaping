@@ -6,6 +6,7 @@ import OurStorySection from './pages/sections/OurStorySection';
 import FAQSection from './pages/sections/FAQSection';
 import Footer from './components/Footer';
 import TransformYourSpaceSection from "@/app/pages/sections/TransformYourSpaceSection";
+import ReviewsSection from "@/app/pages/sections/ReviewsSection";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
           <TransformYourSpaceSection />
           <OurStorySection />
           <FAQSection />
+          <ReviewsSection/>
         </main>
         <Footer />
       </>

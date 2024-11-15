@@ -27,7 +27,7 @@ export default function HeroSection() {
     return (
         <section
             id="hero"
-            className="bg-[#191919] text-white pt-8 md:pt-24 items-stretch"
+            className="bg-[#191919] text-white pt-4 md:pt-8 items-stretch"
             style={{ minHeight: isSmallScreen ? "calc(100vh - 75px)" : "calc(100vh - 80px)" }}  // Adjust for navbar height
         >
             {/* Main Content */}
