@@ -21,7 +21,6 @@ export default function Navbar() {
             <div className="max-w-[1920px] mx-auto flex items-center justify-between px-6">
 
                 {/* Logo Section */}
-                <button onClick={() => scrollToSection('hero')} className="focus:outline-none">
                     <Image
                         src="/images/logo/logo.png"
                         alt="Jessamine Landscaping Logo"
@@ -30,7 +29,6 @@ export default function Navbar() {
                         priority
                         className="w-48 sm:w-72 md:w-96 h-auto"
                     />
-                </button>
 
                 {/* Hamburger Icon for Mobile */}
                 <div className="md:hidden">
@@ -81,7 +79,10 @@ export default function Navbar() {
                         </a>
                     </li>
                     <li>
-                        <a href="#" className="hover:text-[rgb(252,194,0)]">
+                        <a
+                            href="#"
+                            onClick={() => scrollToSection('ourStory')}
+                            className="hover:text-[rgb(252,194,0)]">
                             Our Story
                         </a>
                     </li>
