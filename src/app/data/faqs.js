@@ -1,5 +1,7 @@
 export const faqs = [
-    { id: 1, question: 'How often should I mow my lawn?', answer: 'Generally once a week during growing seasons.' },
-    { id: 2, question: 'Do you offer free consultations?', answer: 'Yes, we provide free consultations for new clients.' },
-    // Add more FAQs as needed
+    { id: 1, question: 'What services do you offer?', answer: 'We offer a wide range of landscaping services including lawn care, leaf removal, shrub trimming, and irrigation installation. Our team is dedicated to providing high-quality maintenance and design solutions tailored to your needs. Whether you need a seasonal cleanup or a complete landscape overhaul, we\'ve got you covered.' },
+    { id: 2, question: 'How is pricing determined?', answer: 'Pricing for our services is based on several factors including the size of your property, the specific services requested, and the complexity of the work. We provide free estimates to give you a clear understanding of the costs involved. Our goal is to offer competitive pricing while maintaining the highest quality of service.'},
+    { id: 3, question: 'How often should I maintain my lawn?', answer: 'Regular maintenance is key to a healthy lawn. We recommend mowing weekly during the growing season and fertilizing every 6-8 weeks. Additionally, seasonal services like leaf removal can enhance your lawn\'s health.'},
+    { id: 4, question: 'What is your service area?', answer: 'We proudly serve a wide range of areas in the Upstate with a focus in Greenville and Anderson. Our team is equipped to handle projects of all sizes, from residential to commercial properties. If you\'re unsure whether we cover your area, just reach out!'},
+    { id: 5, question: 'Do you offer consultations?', answer: 'Yes, we offer free consultations to discuss your landscaping needs and vision. Our experts will assess your property and provide tailored recommendations. This is a great opportunity to ask questions and explore your options.'},
 ];
