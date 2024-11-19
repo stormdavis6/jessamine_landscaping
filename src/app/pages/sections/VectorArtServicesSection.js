@@ -105,7 +105,7 @@ export default function VectorArtServicesSection() {
                         <Button
                             text="Call Now"
                             className="flex-1 bg-[#D2D5DA] text-[#191919] hover:bg-[rgb(252,194,0)] border-none min-h-10 px-2 py-4 rounded-2xl cursor-pointer text-lg md:text-xl font-extrabold font-figtree flex items-center justify-center"
-                            onClick={null}
+                            onClick={handleCallNowClick}
                         />
                     </div>
 
