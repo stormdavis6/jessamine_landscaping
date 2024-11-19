@@ -1,17 +1,16 @@
 "use client";
 
-import { useState } from 'react';
-import Image from 'next/image';
+import { useState } from "react";
+import Image from "next/image";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
     const scrollToSection = (sectionId) => {
-        // Check if running on the client side
-        if (typeof document !== 'undefined') {
+        if (typeof document !== "undefined") {
             const section = document.getElementById(sectionId);
             if (section) {
-                section.scrollIntoView({ behavior: 'smooth' });
+                section.scrollIntoView({ behavior: "smooth" });
             }
         }
     };
@@ -19,16 +18,15 @@ export default function Navbar() {
     return (
         <nav className="bg-[#191919] text-white py-4">
             <div className="max-w-[1920px] mx-auto flex items-center justify-between px-6">
-
                 {/* Logo Section */}
-                    <Image
-                        src="/images/logo/logo.png"
-                        alt="Jessamine Landscaping Logo"
-                        width={400}
-                        height={80}
-                        priority
-                        className="w-48 sm:w-72 md:w-96 h-auto"
-                    />
+                <Image
+                    src="/images/logo/logo.png"
+                    alt="Jessamine Landscaping Logo"
+                    width={400}
+                    height={80}
+                    priority
+                    className="w-48 sm:w-72 md:w-96 h-auto"
+                />
 
                 {/* Hamburger Icon for Mobile */}
                 <div className="md:hidden">
@@ -65,39 +63,33 @@ export default function Navbar() {
                 {/* Navigation Links */}
                 <ul
                     className={`flex-col md:flex md:flex-row md:items-center md:justify-between md:ml-10 gap-8 mt-4 md:mt-0 text-xl lg:text-2xl text-center font-semibold ${
-                        isOpen ? 'flex' : 'hidden'
+                        isOpen ? "flex" : "hidden"
                     } md:flex`}
                     style={{ fontFamily: "'Figtree', sans-serif" }} // Apply Figtree font
                 >
                     <li>
-                        <a
-                            href="#"
-                            onClick={() => scrollToSection('services')}
+                        <button
+                            onClick={() => scrollToSection("services")}
                             className="hover:text-[rgb(252,194,0)]"
                         >
                             Services
-                        </a>
+                        </button>
                     </li>
                     <li>
-                        <a
-                            href="#"
-                            onClick={() => scrollToSection('ourStory')}
-                            className="hover:text-[rgb(252,194,0)]">
+                        <button
+                            onClick={() => scrollToSection("ourStory")}
+                            className="hover:text-[rgb(252,194,0)]"
+                        >
                             Our Story
-                        </a>
+                        </button>
                     </li>
-                    {/*<li>*/}
-                    {/*    <a href="#" className="hover:text-[rgb(252,194,0)]">*/}
-                    {/*        Reviews*/}
-                    {/*    </a>*/}
-                    {/*</li>*/}
                     <li>
-                        <a
-                            href="#"
-                            onClick={() => scrollToSection('faq')}
-                            className="hover:text-[rgb(252,194,0)]">
+                        <button
+                            onClick={() => scrollToSection("faq")}
+                            className="hover:text-[rgb(252,194,0)]"
+                        >
                             FAQs
-                        </a>
+                        </button>
                     </li>
                 </ul>
             </div>

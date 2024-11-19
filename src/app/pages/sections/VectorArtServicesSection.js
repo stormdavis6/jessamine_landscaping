@@ -36,12 +36,10 @@ export default function VectorArtServicesSection() {
     };
 
     const handleCallNowClick = () => {
-        // Create a test link to check if `tel:` protocol is supported
-        const testLink = document.createElement("a");
-        testLink.href = "tel:+18643598470";
+        const phoneNumber = "tel:+18643598470";
 
         // Check if the device supports making calls
-        if (!testLink.click || !navigator.userAgent.match(/(iPhone|Android|webOS|BlackBerry|Windows Phone)/i)) {
+        if (!navigator.userAgent.match(/(iPhone|Android|webOS|BlackBerry|Windows Phone)/i)) {
             toast.error("This device cannot make phone calls. Please call 864-359-8470 on a mobile device.", {
                 position: "top-center",
                 autoClose: 5000,
@@ -51,7 +49,7 @@ export default function VectorArtServicesSection() {
                 draggable: true,
             });
         } else {
-            window.location.href = testLink.href; // Trigger the call for capable devices
+            window.location.href = phoneNumber; // Trigger the call for capable devices
         }
     };
 

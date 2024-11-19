@@ -51,7 +51,7 @@ export default function FAQSection() {
                 <Button
                     text="Contact"
                     className="bg-[#191919] text-[#FCC200] border-4 border-[#FCC200] min-w-32 min-h-15 p-4 md:p-6 cursor-pointer sm:text-xl md:text-2xl lg:text-3xl font-bold font-figtree flex items-center justify-center"
-                    onClick={handleOpenModal}  // Open modal when clicked
+                    onClick={handleOpenModal}  // Open contact modal when clicked
                 />
             </div>
 

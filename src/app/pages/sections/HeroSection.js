@@ -4,10 +4,21 @@ import Button from "../../components/Button";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { toast, ToastContainer } from "react-toastify"; // Import toast and ToastContainer
-import "react-toastify/dist/ReactToastify.css"; // Import toast styles
+import "react-toastify/dist/ReactToastify.css";
+import Modal from "@/app/components/Modal";
+import ContactForm from "@/app/components/ContactForm"; // Import toast styles
 
 export default function HeroSection() {
     const [isSmallScreen, setIsSmallScreen] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const handleOpenModal = () => {
+        setIsModalOpen(true);
+    };
+
+    const handleCloseModal = () => {
+        setIsModalOpen(false);
+    };
 
     useEffect(() => {
         const handleResize = () => {
@@ -23,12 +34,10 @@ export default function HeroSection() {
     }, []);
 
     const handleCallNowClick = () => {
-        // Create a test link to check if `tel:` protocol is supported
-        const testLink = document.createElement("a");
-        testLink.href = "tel:+18643598470";
+        const phoneNumber = "tel:+18643598470";
 
         // Check if the device supports making calls
-        if (!testLink.click || !navigator.userAgent.match(/(iPhone|Android|webOS|BlackBerry|Windows Phone)/i)) {
+        if (!navigator.userAgent.match(/(iPhone|Android|webOS|BlackBerry|Windows Phone)/i)) {
             toast.error("This device cannot make phone calls. Please call 864-359-8470 on a mobile device.", {
                 position: "top-center",
                 autoClose: 5000,
@@ -38,7 +47,7 @@ export default function HeroSection() {
                 draggable: true,
             });
         } else {
-            window.location.href = testLink.href; // Trigger the call for capable devices
+            window.location.href = phoneNumber; // Trigger the call for capable devices
         }
     };
 
@@ -50,7 +59,7 @@ export default function HeroSection() {
                 style={{ minHeight: isSmallScreen ? "calc(100vh - 75px)" : "calc(100vh - 80px)" }} // Adjust for navbar height
             >
                 {/* Main Content */}
-                <div className="max-w-[1920px] px-6 mx-auto flex flex-col md:flex-row md:items-center md:justify-between min-h-[60vh] flex-1">
+                <div className="max-w-[1920px] px-6 mx-auto flex flex-col md:flex-row md:items-center md:justify-between min-h-[65vh] flex-1">
                     {/* Text Section */}
                     <div className="flex flex-col max-w-sm md:max-w-lg lg:max-w-4xl md:mr-7 mb-7">
                         <h1 className="font-figtree font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-5 md:mb-10 text-left">
@@ -68,7 +77,7 @@ export default function HeroSection() {
                         <Button
                             text="Schedule a Consultation"
                             className="bg-[#D2D5DA] text-[#191919] hover:bg-[rgb(252,194,0)] border-none min-w-36 min-h-20 px-6 py-6 rounded-2xl cursor-pointer text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold font-figtree flex items-center justify-center"
-                            onClick={() => console.log("Schedule a Consultation clicked!")}
+                            onClick={handleOpenModal}  // Open contact modal when clicked
                         />
                         <Button
                             text="Call Now 864.359.8470"
@@ -88,6 +97,12 @@ export default function HeroSection() {
                         className="w-full object-cover object-[95%] md:object-contain"
                     />
                 </div>
+
+                {/* Modal with Contact Form */}
+                <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
+                    <ContactForm />
+                </Modal>
+
             </section>
 
             {/* Toast Container */}

@@ -2,11 +2,19 @@
 
 import Button from "../../components/Button";
 import Image from "next/image";
+import {useState} from "react";
+import Modal from "@/app/components/Modal";
+import ContactForm from "@/app/components/ContactForm";
 
 export default function TransformYourSpaceSection() {
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
-    const handleCallNowClick = () => {
-        console.log('Call Now button clicked!');
+    const handleOpenModal = () => {
+        setIsModalOpen(true);
+    };
+
+    const handleCloseModal = () => {
+        setIsModalOpen(false);
     };
 
     const scrollToSection = (sectionId) => {
@@ -40,7 +48,7 @@ export default function TransformYourSpaceSection() {
                         <Button
                             text="Get Started"
                             className="bg-[#FCC200] text-[#191919] border-none min-w-32 min-h-15 p-4 md:p-6 cursor-pointer sm:text-xl md:text-2xl lg:text-3xl font-bold font-figtree flex items-center justify-center"
-                            onClick={handleCallNowClick}
+                            onClick={handleOpenModal}  // Open contact modal when clicked
                         />
                         <Button
                             text="FAQ"
@@ -74,6 +82,12 @@ export default function TransformYourSpaceSection() {
                     </p>
                 </div>
             </div>
+
+            {/* Modal with Contact Form */}
+            <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
+                <ContactForm />
+            </Modal>
+
         </section>
     );
 }
