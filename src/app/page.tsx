@@ -19,7 +19,7 @@ export default function Home() {
           <TransformYourSpaceSection />
           <OurStorySection />
           <FAQSection />
-          <ReviewsSection/>
+          {/*<ReviewsSection/>*/}
         </main>
         <Footer />
       </>

@@ -86,11 +86,11 @@ export default function Navbar() {
                             Our Story
                         </a>
                     </li>
-                    <li>
-                        <a href="#" className="hover:text-[rgb(252,194,0)]">
-                            Reviews
-                        </a>
-                    </li>
+                    {/*<li>*/}
+                    {/*    <a href="#" className="hover:text-[rgb(252,194,0)]">*/}
+                    {/*        Reviews*/}
+                    {/*    </a>*/}
+                    {/*</li>*/}
                     <li>
                         <a
                             href="#"
