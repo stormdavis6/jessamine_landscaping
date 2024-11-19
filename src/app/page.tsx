@@ -1,3 +1,6 @@
+'use client'
+
+import { useState } from "react";
 import Navbar from './components/Navbar';
 import HeroSection from './pages/sections/HeroSection';
 import VectorArtServicesSection from './pages/sections/VectorArtServicesSection';
@@ -9,19 +12,20 @@ import TransformYourSpaceSection from "@/app/pages/sections/TransformYourSpaceSe
 import ReviewsSection from "@/app/pages/sections/ReviewsSection";
 
 export default function Home() {
-  return (
-      <>
-        <Navbar />
-        <main>
-          <HeroSection />
-          <VectorArtServicesSection />
-          <ServicesSection />
-          <TransformYourSpaceSection />
-          <OurStorySection />
-          <FAQSection />
-          {/*<ReviewsSection/>*/}
-        </main>
-        <Footer />
-      </>
-  );
+    const [navbarHeight, setNavbarHeight] = useState(0); // State to track navbar height
+
+    return (
+        <>
+            <Navbar setNavbarHeight={setNavbarHeight} />
+            <main>
+                <HeroSection navbarHeight={navbarHeight} />
+                <VectorArtServicesSection />
+                <ServicesSection />
+                <TransformYourSpaceSection />
+                <OurStorySection />
+                <FAQSection />
+            </main>
+            <Footer />
+        </>
+    );
 }
