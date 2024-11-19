@@ -2,20 +2,8 @@
 
 import Button from "../../components/Button";
 import Image from "next/image";
-import {useState} from "react";
-import Modal from "@/app/components/Modal";
-import ContactForm from "@/app/components/ContactForm";
 
-export default function TransformYourSpaceSection() {
-    const [isModalOpen, setIsModalOpen] = useState(false);
-
-    const handleOpenModal = () => {
-        setIsModalOpen(true);
-    };
-
-    const handleCloseModal = () => {
-        setIsModalOpen(false);
-    };
+export default function TransformYourSpaceSection({onOpenModal}) {
 
     const scrollToSection = (sectionId) => {
         // Check if running on the client side
@@ -48,7 +36,7 @@ export default function TransformYourSpaceSection() {
                         <Button
                             text="Get Started"
                             className="bg-[#FCC200] text-[#191919] border-none min-w-32 min-h-15 p-4 md:p-6 cursor-pointer sm:text-xl md:text-2xl lg:text-3xl font-bold font-figtree flex items-center justify-center"
-                            onClick={handleOpenModal}  // Open contact modal when clicked
+                            onClick={onOpenModal} // Use the prop to open the modal
                         />
                         <Button
                             text="FAQ"
@@ -82,12 +70,6 @@ export default function TransformYourSpaceSection() {
                     </p>
                 </div>
             </div>
-
-            {/* Modal with Contact Form */}
-            <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
-                <ContactForm />
-            </Modal>
-
         </section>
     );
 }

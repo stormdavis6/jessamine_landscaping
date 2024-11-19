@@ -3,9 +3,8 @@
 import VectorArtServiceCard from '../../components/VectorArtServiceCard';
 import { vectorArtServices } from '../../data/vectorArtServices';
 import Button from "@/app/components/Button";
-import Image from "next/image";
 import {useEffect, useState} from "react";
-import { toast, ToastContainer } from "react-toastify"; // Import toast and ToastContainer
+import { toast } from "react-toastify"; // Import toast
 import "react-toastify/dist/ReactToastify.css"; // Import toast styles
 
 export default function VectorArtServicesSection() {
@@ -54,7 +53,6 @@ export default function VectorArtServicesSection() {
     };
 
     return (
-        <>
             <section id="vectorArtServices" className="bg-[#191919] text-white pt-4 md:pt-8">
                 <div
                     className="max-w-[1920px] px-6 mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-4">
@@ -88,7 +86,8 @@ export default function VectorArtServicesSection() {
                     {/* Vector Art Service Cards Section */}
                     <div className="grid grid-cols-2 gap-2 md:gap-7 w-full">
                         {vectorArtServices.map((service) => (
-                            <VectorArtServiceCard key={service.id} title={service.title} description={service.description}
+                            <VectorArtServiceCard key={service.id} title={service.title}
+                                                  description={service.description}
                                                   image={service.image}/>
                         ))}
                     </div>
@@ -110,19 +109,25 @@ export default function VectorArtServicesSection() {
                 </div>
 
                 {/* Vector Art Services Bottom Image */}
-                <div className="w-full items-center mt-8">
-                    <Image
-                        src={isSmallScreen ? "/images/dividers/servicesDividerCropped.png" : "/images/dividers/servicesDivider.png"}
-                        alt="Bushes"
-                        width={1920}
-                        height={400}
-                        className="w-full object-cover md:object-contain"
+                <div
+                    className="relative flex justify-center items-center mt-8"
+                    style={{
+                        zIndex: 0, // Image stays behind the content
+                        maxWidth: "100%",
+                        marginTop: "auto", // Ensures it stays at the bottom
+                    }}
+                >
+                    <img
+                        src="/images/dividers/servicesDivider.png" // Single image for all screen sizes
+                        alt="Divider"
+                        className="w-full object-cover max-w-none"
+                        style={{
+                            objectFit: "cover",
+                            objectPosition: isSmallScreen ? "center center" : "bottom", // Adjust position for zoom effect
+                            aspectRatio: isSmallScreen ? "16/9" : undefined, // Optional: enforce aspect ratio on small screens
+                        }}
                     />
                 </div>
             </section>
-
-            {/* Toast Container */}
-            <ToastContainer />
-        </>
-);
+    );
 }
