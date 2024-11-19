@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 
 export default function HeroSection() {
     const [isSmallScreen, setIsSmallScreen] = useState(false);
+    const [showAlert, setShowAlert] = useState(false);
 
     useEffect(() => {
         const handleResize = () => {
@@ -21,7 +22,16 @@ export default function HeroSection() {
     }, []);
 
     const handleCallNowClick = () => {
-        console.log('Call Now button clicked!');
+        // Create a test link to check if `tel:` protocol is supported
+        const testLink = document.createElement("a");
+        testLink.href = "tel:+18643598470";
+
+        // Check if the device supports making calls
+        if (!testLink.click || !navigator.userAgent.match(/(iPhone|Android|webOS|BlackBerry|Windows Phone)/i)) {
+            setShowAlert(true); // Show custom alert
+        } else {
+            window.location.href = testLink.href; // Trigger the call for capable devices
+        }
     };
 
     return (
@@ -49,7 +59,7 @@ export default function HeroSection() {
                     <Button
                         text="Schedule a Consultation"
                         className="bg-[#D2D5DA] text-[#191919] hover:bg-[rgb(252,194,0)] border-none min-w-36 min-h-20 px-6 py-6 rounded-2xl cursor-pointer text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold font-figtree flex items-center justify-center"
-                        onClick={handleCallNowClick}
+                        onClick={() => console.log("Schedule a Consultation clicked!")}
                     />
                     <Button
                         text="Call Now 864.359.8470"
@@ -69,6 +79,25 @@ export default function HeroSection() {
                     className="w-full object-cover object-[95%] md:object-contain"
                 />
             </div>
+
+            {/* Custom Alert */}
+            {showAlert && (
+                <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+                    <div className="bg-[#191919] text-white rounded-2xl shadow-lg p-6 w-11/12 max-w-sm">
+                        <h2 className="text-xl font-semibold mb-4">Cannot Make Phone Calls</h2>
+                        <p className="mb-6">
+                            It appears the device you are on cannot make phone calls.
+                            Please call <strong>864-359-8470</strong> on your mobile device.
+                        </p>
+                        <button
+                            onClick={() => setShowAlert(false)}
+                            className="bg-[rgb(252,194,0)] text-[#191919] rounded-full px-6 py-3 font-bold text-lg hover:opacity-90"
+                        >
+                            Close
+                        </button>
+                    </div>
+                </div>
+            )}
 
         </section>
     );

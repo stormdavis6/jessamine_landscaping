@@ -72,7 +72,7 @@ export default function Navbar() {
                     <li>
                         <a
                             href="#"
-                            onClick={() => scrollToSection('vectorArtServices')}
+                            onClick={() => scrollToSection('services')}
                             className="hover:text-[rgb(252,194,0)]"
                         >
                             Services
