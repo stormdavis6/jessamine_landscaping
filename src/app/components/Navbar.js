@@ -56,13 +56,22 @@ export default function Navbar({ setNavbarHeight }) {
                 {/* Navigation Links */}
                 <ul className={`flex-col md:flex md:flex-row md:items-center md:justify-between md:ml-10 gap-8 mt-4 md:mt-0 text-xl lg:text-2xl text-center font-semibold ${isOpen ? "flex" : "hidden"} md:flex`}>
                     <li>
-                        <button onClick={() => scrollToSection("services")} className="hover:text-[rgb(252,194,0)]">Services</button>
+                        <button onClick={() => scrollToSection("services")}
+                                className="hover:text-[rgb(252,194,0)]">Services
+                        </button>
                     </li>
                     <li>
-                        <button onClick={() => scrollToSection("ourStory")} className="hover:text-[rgb(252,194,0)]">Our Story</button>
+                        <button onClick={() => scrollToSection("ourStory")} className="hover:text-[rgb(252,194,0)]">Our
+                            Story
+                        </button>
                     </li>
                     <li>
-                        <button onClick={() => scrollToSection("faq")} className="hover:text-[rgb(252,194,0)]">FAQs</button>
+                        <button onClick={() => scrollToSection("reviews")} className="hover:text-[rgb(252,194,0)]">Reviews
+                        </button>
+                    </li>
+                    <li>
+                        <button onClick={() => scrollToSection("faq")} className="hover:text-[rgb(252,194,0)]">FAQs
+                        </button>
                     </li>
                 </ul>
             </div>
