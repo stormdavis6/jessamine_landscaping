@@ -37,6 +37,7 @@ export default function Home() {
                 <TransformYourSpaceSection onOpenModal={handleOpenModal} />
                 <OurStorySection />
                 <FAQSection onOpenModal={handleOpenModal} />
+                <ReviewsSection />
             </main>
 
             {/* Footer */}
