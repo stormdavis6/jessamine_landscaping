@@ -63,8 +63,9 @@ export default function VectorArtServicesSection() {
                             Shape Your Outdoor Space with Our Expert Services
                         </h1>
                         <p className="font-figtree font-normal text-lg lg:text-xl xl:text-2xl md:text-left mb-8">
-                            Our comprehensive landscaping services cater to all your outdoor needs. From lawn care to
-                            irrigation design, we ensure your landscape thrives.
+                            Our comprehensive landscaping services cater to all your outdoor needs.
+                            From irrigation design and install to custom hardscaping elements such as retaining walls and patios,
+                            we ensure your landscape thrives and looks good.
                         </p>
 
                         {/* Buttons Section for Desktop (Visible on md and up) */}

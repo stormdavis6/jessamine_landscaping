@@ -57,9 +57,9 @@ export default function HeroSection({ navbarHeight, onOpenModal }) {
                             Shaping Outdoor Spaces That Inspire and Soothe
                         </h1>
                         <p className="font-figtree font-normal sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-left">
-                            Experience the beauty of a well-maintained landscape that enhances your property's curb
-                            appeal. Our team of professionals is here to provide tailored solutions for all your
-                            landscaping needs.
+
+                            Experience the beauty of a well-designed landscape that enhances your property’s curb appeal.
+                            Our team of professionals is here to provide tailored solutions for all your landscaping needs.
                         </p>
                     </div>
 

@@ -63,10 +63,9 @@ export default function TransformYourSpaceSection({onOpenModal}) {
                 className="max-w-[1920px] flex flex-col items-center md:items-start px-6 pt-6 mt-3 md:mt-12 md:p-0 mx-auto">
                 <div className="max-w-sm md:max-w-lg lg:max-w-4xl">
                     <p className="font-figtree font-normal text-lg lg:text-xl xl:text-2xl text-center md:text-left mb-5 md:mb-7">
-                        Our landscaping services are designed to enhance the beauty and functionality of your outdoor
-                        spaces. From meticulous lawn care to expert irrigation design, we cover all aspects of
-                        landscaping to meet your needs. Let us help you create a stunning landscape that you can enjoy
-                        year-round.
+                        Our comprehensive landscaping services cater to all your outdoor needs.
+                        From irrigation design and install to custom hardscaping elements such as retaining walls and patios,
+                        we ensure your landscape thrives and looks good.
                     </p>
                 </div>
             </div>
